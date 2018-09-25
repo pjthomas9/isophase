@@ -1,0 +1,26 @@
+wiener wx
+wiener wy
+
+x' = -omega*y + gamma*x*(1-rho(x,y)^2) + c*gamma*y*Q(rho(x,y)) + sigma*wx
+y' = omega*x + gamma*y*(1-rho(x,y)^2) - c*gamma*x*Q(rho(x,y)) + sigma*wy
+
+rho(x,y) = sqrt(x^2+y^2)
+Q(rho) = rho^2-1
+
+param omega=1
+param gamma=15
+param sigma=0.6
+param c=4
+
+
+init x=0
+init y=-1
+
+@ total=1,dt=0.0001,math=euler
+@ maxstor=1000000000,bounds=1000000000,maxstor=1000000000,dtmax=30
+@ tol=1e-8,atol=1e-8
+@ xplot=x,yplot=y
+@ xlo=-2,xhi=2,ylo=-2,yhi=2
+
+done
+

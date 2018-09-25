@@ -1,0 +1,17 @@
+wiener wx
+wiener wy
+dx/dt=f(x,y)+sigma*wx
+dy/dt=g(x,y)+sigma*wy
+f(x,y)=cos(x)*sin(y)+alpha*sin(2*x)
+g(x,y)=-sin(x)*cos(y)+alpha*sin(2*y)
+par alpha=0.1
+par sigma=0.15
+init x=0
+init y=0
+aux xx=(x)*heav(-x+PI/2)+(PI-x)*heav(x-PI/2)*heav(-x+3*PI/2)+(x-2*PI)*heav(x-3*PI/2)
+aux yy=(y)*heav(-y+PI/2)+(PI-y)*heav(y-PI/2)*heav(-y+3*PI/2)+(y-2*PI)*heav(y-3*PI/2)
+@ xlo=-2,xhi=2,ylo=-2,yhi=2
+@ xplot=xx,yplot=yy
+@ meth=euler,total=100,dt=0.001, bounds=1000000000
+@ FOLD=x,FOLD=y,TOR_PER=6.283185307179586
+done

@@ -1,0 +1,24 @@
+wiener xi
+
+dr/dt = r*(1-r^2)+0.5*(sigma^2*(cos(theta))^2*r-sigma^2*r*(sin(theta))^2)+sigma*r*cos(theta)*xi
+
+dtheta/dt = w+r*cos(theta)-k*r^2+0.5*(sigma^2*cos(theta)*sin(theta))+sigma*sin(theta)*xi
+
+param w=1.99
+param k=1
+param sigma=0.2
+
+init r=0.5
+init theta=4
+
+aux x=r*cos(theta)
+aux y=r*sin(theta)
+
+@ total=100,dt=0.01,math=euler
+@ maxstor=1000000000,bounds=1000000000,maxstor=1000000000,dtmax=30
+@ tol=1e-8,atol=1e-8
+@ xplot=x,yplot=y
+@ xlo=-1.5,xhi=1.5,ylo=-1.5,yhi=1.5
+
+done
+
