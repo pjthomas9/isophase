@@ -1,18 +1,26 @@
-Essential code for reproducing figures of Cao, Lindner and Thomas, A partial
-differential equation for the mean---first--return-time phase of planar
-stochastic oscillators, 2018.
+Code for reproducing figures of Cao, Lindner and Thomas, 
+A Partial Differential Equation for the Mean--Return-Time Phase of Planar Stochastic Oscillators
+SIAM Journal on Applied Mathematics, Volume 80, Issue 1, pp. 422–447 (18 February 2020)
+https://epubs.siam.org/doi/abs/10.1137/18M1218601
 
-Fig 1a
+Fig 2.1.a  
 
-Not generated through simulation or analysis codes.
+Illustration (not generated through simulation or analysis codes).
 
-Fig 1b-c
+Fig 2.1.b-c 
 
 code/heteroclinic/het_osc_transform_fig.m
 
-Fig 2
+Fig 2.2
 
-Not generated through simulation or analysis codes.
+Illustration (not generated through simulation or analysis codes).
+
+
+=== FIGURE LISTINGS SUBJECT TO REVISION TO MATCH PUBLISHED VERSION OF PAPER ===
+(work in progress)
+
+
+
 
 Fig 3a
 
